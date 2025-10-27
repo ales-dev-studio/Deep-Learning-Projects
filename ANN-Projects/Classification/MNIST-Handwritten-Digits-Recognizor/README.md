@@ -1,10 +1,7 @@
-Perfect 👍 Here’s a **detailed, professional project description** for your file — ideal for your GitHub repo, portfolio, or project documentation. It’s written to clearly explain what your notebook does, how it works, and why each step matters.
 
----
+# MNIST Handwritten Digits Recognizer
 
-# 🧠 MNIST Handwritten Digits Recognizer
-
-## 📋 Project Overview
+## Project Overview
 
 The **MNIST Handwritten Digits Recognizer** project demonstrates how to build and train a **Multi-Layer Perceptron (MLP)** neural network to classify handwritten digits (0–9) using the classic **MNIST dataset**.
 This notebook provides a complete walkthrough — from data loading and visualization to model training, performance evaluation, and interpretation of results.
