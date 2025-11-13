@@ -3,14 +3,14 @@
 
 ## Project Overview
 
-The **MNIST Handwritten Digits Recognizer** project demonstrates how to build and train a **Multi-Layer Perceptron (MLP)** neural network to classify handwritten digits (0–9) using the classic **MNIST dataset**.
-This notebook provides a complete walkthrough — from data loading and visualization to model training, performance evaluation, and interpretation of results.
-
-The goal is to recognize images of handwritten digits by automatically learning their features from pixel data, showcasing how neural networks can solve pattern recognition problems.
+The **MNIST Handwritten Digits Recognizer** implemented with both Scikit-learn and TensorFlow.
+Two complete neural network approaches for handwritten digit recognition. Includes data preprocessing, model training, and comprehensive evaluation with performance visualization.
 
 ---
 
-## 🧰 Technologies & Libraries Used
+## First notebook using scikit-learn
+
+### Technologies & Libraries Used
 
 | Category                     | Libraries                                                     |
 | ---------------------------- | ------------------------------------------------------------- |
@@ -22,7 +22,7 @@ The goal is to recognize images of handwritten digits by automatically learning 
 | **Evaluation**               | `accuracy_score`, `classification_report`, `confusion_matrix` |
 
 
-## 📈 Results Summary
+### Results Summary
 
 | Metric                | Training                                             | Testing |
 | --------------------- | ---------------------------------------------------- | ------- |
@@ -34,7 +34,7 @@ The MLPClassifier achieves high accuracy without deep learning frameworks, demon
 
 ---
 
-## Key Learnings
+### Key Learnings
 
 * Importance of feature scaling in neural networks.
 * Practical workflow for supervised image classification using scikit-learn.
@@ -43,7 +43,7 @@ The MLPClassifier achieves high accuracy without deep learning frameworks, demon
 
 ---
 
-## Possible Improvements
+### Possible Improvements
 
 * Increase training iterations (`max_iter=300` or `early_stopping=True`).
 * Try different architectures (e.g., more layers or neurons).
@@ -52,7 +52,7 @@ The MLPClassifier achieves high accuracy without deep learning frameworks, demon
 
 ---
 
-## Project Files
+### Project Files
 
 | File                                          | Description                                                          |
 | --------------------------------------------- | -------------------------------------------------------------------- |
@@ -62,8 +62,27 @@ The MLPClassifier achieves high accuracy without deep learning frameworks, demon
 
 ---
 
-## Summary
+## Second notebook using TensorFlow
 
-This notebook is a **clean example of neural network classification using classical machine learning tools**.
+## Project Overview
 
+This notebook implements a comprehensive deep learning solution for handwritten digit classification using TensorFlow on the MNIST dataset. The implementation demonstrates professional-grade neural network architecture with advanced techniques to achieve state-of-the-art performance in digit recognition.
 
+## Model Architecture
+
+**Deep Neural Network with Advanced Components:**
+```python
+# Multi-layer architecture with regularization
+Input (784) → Dense(512) → BatchNorm → Dropout(0.3)
+           → Dense(256) → BatchNorm → Dropout(0.3) 
+           → Dense(128) → BatchNorm → Dropout(0.2)
+           → Dense(64) → BatchNorm → Dropout(0.2)
+           → Output(10, softmax)
+```
+
+**Key Features:**
+- **Multiple Hidden Layers**: 512 → 256 → 128 → 64 neurons for hierarchical feature learning
+- **Batch Normalization**: Stabilizes training and accelerates convergence
+- **Dropout Regularization**: Prevents overfitting (30% dropout rates)
+- **Advanced Activation**: ReLU activations for better gradient flow
+- **Professional Training**: Adam optimizer with learning rate scheduling
